@@ -42,3 +42,4 @@ end
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'simple_form'
+gem 'activeadmin', github: 'activeadmin'

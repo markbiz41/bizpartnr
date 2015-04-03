@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
       nil
     end
   end
+
+  def authenticate
+    redirect_to login_path, notice: 'You need to login' if current_user.nil?
+  end
 end

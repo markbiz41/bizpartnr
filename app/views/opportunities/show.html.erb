@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Expertise desired:</strong>
+  <%= @opportunity.expertise_desired %>
+</p>
+
+<p>
+  <strong>Partnership opportunity:</strong>
+  <%= @opportunity.partnership_opportunity %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @opportunity.industry.name %>
+</p>
+
+<p>
+  <strong>Compensation:</strong>
+  <%= @opportunity.compensation %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @opportunity.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
+<%= link_to 'Back', opportunities_path %>

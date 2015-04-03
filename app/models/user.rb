@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :password_confirmation
 
+  has_many :opportunities
 
   def self.authenticate(email, password)
     user = find_by(email: email)

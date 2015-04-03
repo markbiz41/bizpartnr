@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expertise_desired: MyString
+  partnership_opportunity: MyString
+  industry_id: 
+  compensation: 9.99
+  user_id: 
+
+two:
+  expertise_desired: MyString
+  partnership_opportunity: MyString
+  industry_id: 
+  compensation: 9.99
+  user_id: 

@@ -1,0 +1,30 @@
+<%= simple_form_for(@opportunity, as: 'opportunity')  do |f| %>
+  <% if @opportunity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@opportunity.errors.count, "error") %> prohibited this opportunity from being saved:</h2>
+
+      <ul>
+      <% @opportunity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <%= f.input :expertise_desired %>
+    <%= f.input :partnership_opportunity %>
+
+    
+  <div class="field">
+    <%= f.label :industry_id %><br>
+    <%= f.collection_select(:industry_id, Industry.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :compensation %><br>
+    <%= f.text_field :compensation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

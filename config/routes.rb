@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :opportunities
+
   get 'signup' => 'users#new'
 
   resources :users

@@ -23,8 +23,8 @@
         <td><%= opportunity.compensation %></td>
         <td><%= opportunity.user.email %></td>
         <td><%= link_to 'Show', opportunity %></td>
-        <td><%= link_to 'Edit', edit_opportunity_path(opportunity) %></td>
-        <td><%= link_to 'Destroy', opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_opportunity_path(opportunity) if current_user == opportunity.user %></td>
+        <td><%= link_to 'Destroy', opportunity, method: :delete, data: { confirm: 'Are you sure?' } if current_user == opportunity.user  %></td>
       </tr>
     <% end %>
   </tbody>

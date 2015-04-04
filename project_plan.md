@@ -65,3 +65,11 @@
 2.  Not enough initial users for the site to exist
 3.  Site doesn't end up working
 4.  I have not done email yet.
+
+# Practice Demo
+1.   Reminder to all: Be prepared to present your app to the class on Monday. It will be a chance to practice your intro (who are you, what did you do before, what did you build and why), then show what you've built so far and what you still hope to build and close by going over your tech stack.
+2.  GitHub
+    hakimel/reveal.js
+    reveal.js - The HTML Presentation Framework
+    https://github.com/hakimel/reveal.js
+    

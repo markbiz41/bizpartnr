@@ -22,8 +22,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @opportunity.user.email %>
+  <%= link_to @opportunity.user.full_name, @opportunity.user %>
 </p>
 
-<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
+<%= link_to 'Edit', edit_opportunity_path(@opportunity) if current_user == @opportunity.user %>
 <%= link_to 'Back', opportunities_path %>

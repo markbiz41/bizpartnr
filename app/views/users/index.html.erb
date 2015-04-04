@@ -1,0 +1,34 @@
+<div class='row'>
+  <div class='col-md-12'>
+
+    <h1>User List</h1>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email </th>
+          <th>Industry</th>
+          <th>Position</th>
+          <th>City</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.full_name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.industry %></td>
+            <td><%= user.position %></td>
+            <td><%= user.city %></td>
+
+            <td><%= link_to 'Show', user %></td>
+            </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>

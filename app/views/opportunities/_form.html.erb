@@ -15,10 +15,10 @@
     <%= f.input :expertise_desired %>
     <%= f.input :partnership_opportunity %>
 
-    
+
   <div class="field">
     <%= f.label :industry_id %><br>
-    <%= f.collection_select(:industry_id, Industry.all, :id, :name) %>
+    <%= f.collection_select(:industry_id, Industry.all.order('lower(name) ASC'), :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :compensation %><br>

@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessor :password_confirmation
 
+  mount_uploader :avatar, AvatarUploader
+
   has_many :opportunities
 
   def self.authenticate(email, password)

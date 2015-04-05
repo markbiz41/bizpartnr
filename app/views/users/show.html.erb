@@ -3,6 +3,11 @@
     <h1><%= @user.full_name %> Profile </h1>
 
     <table class="table">
+
+      <tr>
+        <td><%= image_tag @user.avatar.url, class: 'img-responsive' %></td>
+        <td></td>
+      </tr>
       <tr>
         <td><strong>Full Name</strong></td>
         <td><%= @user.full_name %></td>

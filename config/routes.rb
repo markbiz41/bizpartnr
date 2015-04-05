@@ -8,6 +8,11 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+
+  get 'search' => 'home#search'
+  post 'search' => 'home#search_results'
+
+
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
   post 'sessions' => 'sessions#create'

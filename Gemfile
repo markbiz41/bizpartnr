@@ -39,6 +39,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'pry'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'simple_form'

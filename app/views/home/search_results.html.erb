@@ -1,0 +1,57 @@
+<% if @user_search %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email </th>
+        <th>Industry</th>
+        <th>Position</th>
+        <th>City</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @results.each do |user| %>
+        <tr>
+          <td><%= user.full_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.industry %></td>
+          <td><%= user.position %></td>
+          <td><%= user.city %></td>
+
+          <td><%= link_to 'Show', user %></td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% elsif @opportunity_search %>
+  <table>
+    <thead>
+      <tr>
+        <th>Expertise desired</th>
+        <th>Partnership opportunity</th>
+        <th>Industry</th>
+        <th>Compensation</th>
+        <th>User</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @results.each do |opportunity| %>
+        <tr>
+          <td><%= opportunity.expertise_desired %></td>
+          <td><%= opportunity.partnership_opportunity %></td>
+          <td><%= opportunity.industry.name %></td>
+          <td><%= opportunity.compensation %></td>
+          <td><%= opportunity.user.email %></td>
+          <td><%= link_to 'Show', opportunity %></td>
+          <td><%= link_to 'Edit', edit_opportunity_path(opportunity) if current_user == opportunity.user %></td>
+          <td><%= link_to 'Destroy', opportunity, method: :delete, data: { confirm: 'Are you sure?' } if current_user == opportunity.user  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

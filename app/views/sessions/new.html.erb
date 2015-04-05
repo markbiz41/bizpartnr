@@ -1,8 +1,13 @@
-<h1>Login</h1>
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3'>
+    <h1>Login</h1>
 
-<%= form_tag sessions_path do %>
+    <%= simple_form_for :login, url: sessions_path do |f| %>
 
-<%= text_field_tag :email %>
-<%= text_field_tag :password %>
-<%= submit_tag %>
-<% end %>
+    <%= f.input :email %>
+    <%= f.input :password, as: :password %>
+    <%= f.submit value: "Login"  %>
+    <% end %>
+
+    </div>
+</div>

@@ -1,8 +1,6 @@
 # BizPartnr.com Steps
 5.  User can receive and send out messages
 6.  Partners can receive and send out messages
-7.  Sign-up needs to show written: Email, Password, and Confirm Password
-8.  Login needs to show written: Email and Password
 
 # User
 1.  Visitors should be able to visit the home page

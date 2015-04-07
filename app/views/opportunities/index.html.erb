@@ -1,34 +1,8 @@
 
 
-<h1>Listing Opportunities</h1>
+<h1>Opportunity List</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Expertise desired</th>
-      <th>Partnership opportunity</th>
-      <th>Industry</th>
-      <th>Compensation</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @opportunities.each do |opportunity| %>
-      <tr>
-        <td><%= opportunity.expertise_desired %></td>
-        <td><%= opportunity.partnership_opportunity %></td>
-        <td><%= opportunity.industry.name %></td>
-        <td><%= opportunity.compensation %></td>
-        <td><%= opportunity.user.email %></td>
-        <td><%= link_to 'Show', opportunity %></td>
-        <td><%= link_to 'Edit', edit_opportunity_path(opportunity) if current_user == opportunity.user %></td>
-        <td><%= link_to 'Destroy', opportunity, method: :delete, data: { confirm: 'Are you sure?' } if current_user == opportunity.user  %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'list', opportunities: @opportunities %>
 
 <br>
 

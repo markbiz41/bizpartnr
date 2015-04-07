@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-
+  get 'contact' => 'home#contact'
+  post 'send_message' => 'home#send_message'
   get 'search' => 'home#search'
   post 'search' => 'home#search_results'
 

@@ -22,4 +22,14 @@ class HomeController < ApplicationController
     end
 
   end
+
+  def contact
+
+  end
+
+  def send_message
+    if params[:contact][:message]
+      puts params[:contact][:message]
+    end
+  end
 end

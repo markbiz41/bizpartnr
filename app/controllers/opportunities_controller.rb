@@ -1,6 +1,6 @@
 class OpportunitiesController < ApplicationController
   before_action :set_opportunity, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate
+  before_action :authenticate, except: [:index]
 
   # GET /opportunities
   # GET /opportunities.json

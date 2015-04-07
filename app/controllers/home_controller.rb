@@ -29,7 +29,8 @@ class HomeController < ApplicationController
 
   def send_message
     if params[:contact][:message]
-      puts params[:contact][:message]
+      ContactMailer.send_message(params[:contact][:message]).deliver_now
+      redirect_to contact_path, notice: 'Message was sent'
     end
   end
 end

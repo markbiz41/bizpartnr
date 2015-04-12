@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate, except: [:new, :create]
 
   def index
-    @users = User.all
+    @users = User.all.page(params[:page])
   end
 
   def show

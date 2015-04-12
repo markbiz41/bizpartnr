@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_secure_password
+  paginates_per 3
   attr_accessor :password_confirmation
 
   mount_uploader :avatar, AvatarUploader

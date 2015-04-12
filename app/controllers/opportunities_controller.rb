@@ -5,7 +5,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities
   # GET /opportunities.json
   def index
-    @opportunities = Opportunity.all.order('created_at DESC')
+    @opportunities = Opportunity.all.order('created_at DESC').page(params[:page])
   end
 
   # GET /opportunities/1

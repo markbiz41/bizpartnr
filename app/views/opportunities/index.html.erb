@@ -4,6 +4,8 @@
 
 <%= render 'list', opportunities: @opportunities %>
 
+<%= paginate @opportunities, :theme => 'twitter-bootstrap-3',
+                   :pagination_class => "pagination-sm pagination-centered" %>
 <br>
 
 <%= link_to 'New Opportunity', new_opportunity_path %>

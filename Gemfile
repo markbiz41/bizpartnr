@@ -53,3 +53,6 @@ group :production do
 end
 
 gem 'rails_12factor'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'bcrypt'

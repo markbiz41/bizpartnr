@@ -48,7 +48,6 @@ gem 'simple_form'
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
 
-
 group :production do
   gem 'pg'
 end

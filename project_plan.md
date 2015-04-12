@@ -3,7 +3,6 @@
 6.  Partners can receive and send out messages
 
 # User
-1.  Visitors should be able to visit the home page
 9.  Users can send messages to partners on the site
 
 # Tasks
@@ -30,7 +29,6 @@
 8.  Amazon S3 Identifiers - store images
 9.  gem 'pg' - postgres (interface with SQL database)
 11.  gem 'thin' - glues together 3 of the best Ruby libraries
-12.  gem 'rails_12factor' - makes running your Rails app easier
 13.  SendGrid - for sending out mass emails to visitors
 14.  gem 'mandrill api' - for sending out mass emails to visitors
 

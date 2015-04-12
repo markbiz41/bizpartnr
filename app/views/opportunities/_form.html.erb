@@ -14,17 +14,15 @@
 
     <%= f.input :expertise_desired %>
     <%= f.input :partnership_opportunity %>
+    <%= f.input :compensation, as: :integer, label: 'Compensation (Please put in only numbers for compensation without commas.)' %>
 
+    <div class="row">
+        <div class="col-xs-3">
+        <%= f.association :industry, collection:  Industry.all.order('lower(name) ASC'), input_html: {class: 'col-xs-2'} %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :industry_id %><br>
-    <%= f.collection_select(:industry_id, Industry.all.order('lower(name) ASC'), :id, :name) %>
-  </div>
-  <div class="field">
-    <%= f.label :compensation %><br>
-    <%= f.text_field :compensation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<br/>
+<br/>
+    <%= f.submit class: 'btn btn-primary' %>
 <% end %>

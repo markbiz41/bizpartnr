@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages
+
   ActiveAdmin.routes(self)
   resources :opportunities
 

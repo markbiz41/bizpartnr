@@ -20,8 +20,8 @@
         <td><%= opportunity.industry.name %></td>
         <td><%= number_to_currency opportunity.compensation %></td>
         <td>
-          <%= link_to opportunity.user.email, opportunity.user %><br />
-          <%= link_to opportunity.user.full_name, opportunity.user %>
+          <%= link_to opportunity.user.full_name, opportunity.user %><br />
+          <%= link_to opportunity.user.email, opportunity.user %>
           </td>
         <td><%=opportunity.created_at.strftime("%d %b %Y")%></td>
         <td><%= link_to 'Show', opportunity %></td>

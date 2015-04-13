@@ -36,5 +36,12 @@
    </div>
  </nav>
 
-
- <p id="notice"><%= notice %></p>
+<% if notice %>
+   <div class="container" style='margin-top: 10px'>
+     <div class='col-lg-3 col-lg-offset-9'>
+        <div class="alert alert-info" role="alert">
+          <%= notice %>
+        </div>
+     </div>
+   </div>
+ <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413182007) do
+ActiveRecord::Schema.define(version: 20150413190533) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20150413182007) do
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password"
-    t.string   "industry"
     t.string   "position"
     t.string   "city"
     t.text     "contact_info"
@@ -69,6 +68,9 @@ ActiveRecord::Schema.define(version: 20150413182007) do
     t.string   "avatar"
     t.string   "password_digest"
     t.string   "state"
+    t.integer  "industry_id"
   end
+
+  add_index "users", ["industry_id"], name: "index_users_on_industry_id"
 
 end

@@ -1,0 +1,8 @@
+You just received a message on BizPartnr.com from <%= @message.sender.full_name %>
+<br />
+
+<strong>Message Content:<strong> <%= @message.content %>
+
+<br />
+
+<%= link_to 'Click here to reply', message_url(message) %>

@@ -1,7 +1,7 @@
 <%= simple_form_for(@message) do |f| %>
   <%= f.error_notification %>
 
-  <h2>Send message to: <%= @receiver.full_name %></h2>
+  <h2>Send message to: &nbsp;&nbsp;<%= @receiver.full_name %></h2>
   <div class="form-inputs">
     <%= f.input :content %>
   </div>

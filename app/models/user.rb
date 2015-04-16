@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_many :sent_messages, class_name: "Message", foreign_key: :sender_id
   has_many :received_messages, class_name: "Message", foreign_key: :receiver_id
 
+  validates_presence_of :email, :full_name
+
   def self.authenticate(email, password)
     user = find_by(email: email)
 
